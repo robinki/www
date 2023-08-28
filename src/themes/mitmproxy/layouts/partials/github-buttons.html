@@ -1,0 +1,17 @@
+<!-- based on https://github.com/mdo/github-buttons, Apache-2.0 -->
+<span class="github-btn github-me github-btn-large" style="margin-right: .5rem">
+    <a class="gh-btn" href="https://github.com/sponsors/mhils" rel="noopener" target="_blank" aria-label="">
+      <span class="gh-ico" aria-hidden="true"></span>
+      <span class="gh-text">Sponsor</span>
+    </a>
+  </span>
+{{- $repo := getJSON "https://api.github.com/repos/mitmproxy/mitmproxy" -}}
+<span class="github-btn github-stargazers github-btn-large">
+    <a class="gh-btn" href="https://github.com/mitmproxy/mitmproxy" rel="noopener" target="_blank" aria-label="">
+      <span class="gh-ico" aria-hidden="true"></span>
+      <span class="gh-text" id="gh-text">Star</span>
+    </a>
+    <a class="gh-count" href="https://github.com/mitmproxy/mitmproxy" rel="noopener" target="_blank" aria-label="">
+        {{ lang.NumFmt 0 $repo.stargazers_count }}
+    </a>
+  </span>
